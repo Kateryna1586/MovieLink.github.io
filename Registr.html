@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieLink</title>
+   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма реєстрації</title>
+  <style>
+  body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form, .rules, header {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    header img {
+      width: 50px;
+      height: 50px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+    .rules {
+      margin-top: 30px;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" style="position: absolute; top: 20px; left: 20px; display: inline-block; width: 100px; height: 100px;">
+  <img src="logo.golovna.jpg" alt="На головну" style="width: 100%; height: 100%; object-fit: contain;">
+</a> 
+
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
+  <img src="logo.jpg" alt="Логотип сайту" style="width:80px; height:80px; object-fit: contain;">
+  <h1 style="margin:0; color: white; user-select: none;">MovieLink</h1>
+</div>
+  <header>
+   <div style="display: flex; align-items: center; gap: 1rem;">
+    <img src="D.png" alt="Емблема">
+    <h1>Форма реєстрації</h1>
+  </header>
+
+  <form id="registrationForm">
+    <label for="name">Логін</label>
+    <input type="text" id="username" name="username">
+    <div class="error" id="nameError"></div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <div class="error" id="emailError"></div>
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password">
+    <div class="error" id="passwordError"></div>
+    <button type="submit">Зареєструватися</button>
+  </form>
+
+  <div class="rules">
+    <h3>Умови реєстрації:</h3>
+    <ul>
+      <li><strong>Логін</strong>: лише літери, від 2 до 10 символів.</li>
+      <li><strong>Email</strong>: повинен бути у правильному форматі (example@email.com).</li>
+      <li><strong>Пароль</strong>: від 5 до 15 символів.</li>
+      </ul>
+      </div>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      // Clear errors
+      document.querySelectorAll('.error').forEach(e => e.innerText = '');
+
+      // Username validation
+      if (!/^[А-Яа-яA-Za-zҐґЄєІіЇї]{2,30}$/.test(name)) {
+        document.getElementById('nameError').innerText = "Логін повен містити лише літери (2-10 символів).";
+        valid = false;
+      }
+
+      // Email validation
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById('emailError').innerText = "Введіть правильний email.";
+        valid = false;
+      }
+
+      // Password validation
+      if (password.length < 5 || password.length > 15) {
+        document.getElementById('passwordError').innerText = "Пароль повинен бути від 5 до 15 символів.";
+        valid = false;
+      }
+
+        if (valid) {
+        alert('Реєстрація пройшла успішно!');
+      }
+    });
+  </script>
+</body>
+</html>
