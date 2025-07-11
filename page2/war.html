@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieLink</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .logo-link {
+         position: absolute;
+         bottom: 5;
+         left: 0;
+         z-index: 1000;
+         margin: 0;
+         padding: 0;
+        }
+
+       .logo-img {
+           height: 150px;
+           width: auto;
+           cursor: pointer;
+           display: block;
+           margin: 0;
+        }
+        body {
+            background-image: url('fon2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            margin: 0;
+            height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0px; left: 0; right: 0; bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            filter: blur(1px);
+            z-index: -1;
+        }
+
+        header, footer {
+            background-color: #0a0000;
+            color: rgb(253, 250, 250);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header-buttons, .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .header-buttons button,
+        .footer-links a {
+            padding: 0.5rem 1rem;
+            background-color: #2f2d2d;
+            color: white;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .toolbar {
+            width: 200px;
+            background-color: #e6e2e287;
+            padding: 1rem;
+        }
+
+        .toolbar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toolbar li {
+            margin-bottom: 10px;
+            background-color: #e6e2e287 ;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .content {
+            flex: 1;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        .calendar-container {
+            margin: 1rem auto;
+            text-align: center;
+        }
+        .header {
+            position: relative;
+        }
+
+        .header-right-buttons {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .header-right-buttons button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .film-description {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+        }
+    
+    </style>
+</head>
+<body>
+    <header style="position: relative;">
+          <div class="logo-container">
+           <a href="../index.html" class="logo-link">
+              <img src="../logo.golovna.jpg" alt="MovieLink Logo" class="logo-img">
+          </a>
+     </div>
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem;">
+          <img src="logo.jpg" alt="MovieLink логотип" style="width: 100px; height: auto;">
+         <div style="display: flex; flex-direction: column; align-items: center;">
+           <h1 style="margin: 0; font-size: 2rem;">MovieLink</h1>
+         </div>
+      </div>
+
+        <div class="header-buttons">
+    <button onclick="location.href='../page1/drama.html'">Драми</button>
+    <button onclick="location.href='../page2/Home.html'">Фільми про Війну</button>
+    <button onclick="location.href='../page3/Dok.html'">Документальні</button>
+    <button onclick="location.href='../page4/Мультфільми.html'">Мультфільми</button>
+    <button onclick="location.href='../page5/Комедії.html'">Комедії</button>
+</div>
+            
+
+        <div class="header-right-buttons">
+        <a href="#login-form"><button>Авторизація</button></a>
+        <a href="../Registr.html"><button>Реєстрація</button></a>
+        </div>
+
+            
+     </div>
+    
+    </header>
+   
+
+    <div class="main">
+        <aside class="toolbar">
+    <ul>
+        <li>
+            <a href="https://uakino.me/" target="_blank">
+                <img src="uakino.png" width="200" alt="uakino">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="Youtube.png" width="200" alt="Youtube">
+            </a>
+        </li>
+        <li>
+            <a href="https://megogo.net/ua" target="_blank">
+                <img src="Megogo.png" width="200" alt="Megogo">
+            </a>
+        </li>
+        <li>
+            <a href="https://kinokrad.net/" target="_blank">
+                <img src="Kinokrad.png" width="200" alt="Kinokrad">
+            </a>
+        </li>
+        <li>
+            <a href="https://u.kinogo.online/" target="_blank">
+                <img src="kinogo.png" width="200" alt="Kinogo">
+            </a>
+        </li>
+    </ul>
+</aside>
+        <section class="content" style="flex-direction: column; align-items: flex-start;">
+           
+           <div style="display: flex; align-items: center; gap: 1rem;">
+                  <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+               <a href="https://filmix.my/film/drama/160870-v-snayper-belyy-voron-joy1-2022.html" target="_blank">
+                 <img src="снайпер.jpg" alt="Снайпер: Білий ворон" (2022)" width="120">
+               </a>
+
+               <div class="film-description">
+              <p>"Снайпер: Білий ворон" (2022) Почнається війна. Відчувая свій зов і розуміючи, що він повинен обрати свою сторону, приймає непросте рішення....
+                 <br>Головні ролі: Марина Кошкіна, Андрій Мостренко, Roman Semysal, Олег Драч, Роман Ясиновський, Олег Шульга, Вадим Лялько, Вадим Куценок, Vladyslav Dmytrenko, Eugen Volosheniuk
+                 <br>Жанр:  Військовий.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+              </p>
+              </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://filmix.my/film/drama/11889-v-tuman-2010.html" target="_blank">
+                 <img src="Туман.jpg"alt="Туман (2010)" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Туман" (2010) — продовжує традиції фільмів про попаданців.
+                 <br>Головні ролі: Ігор Шмаков, Василь Ракша, Григорій Калінін, Світлана Устинова, Олексій Марков
+                 <br>Жанр: Військовий
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://filmix.my/film/drama/4016-v-v-avguste-44-go-2004.html" target="_blank">
+                 <img src="В августе 44-го.jpg" alt="В серпні 44-го" (2001) width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"В серпні 44-го" (2001) — Для пошуку ворожої, агентурної групи горується військова операція...
+                 <br>Головні ролі: Євген Міронов, Владислав Галкін, Юрій Колокольників, Олексій Петренко, Олександр Феклістов
+                 <br>Жанр: Військовий.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://filmix.my/seria/boevik/124941-v-smersh-l-2007.html" target="_blank">
+                 <img src="Смерш.jpg" alt="Смерш" (2007) width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Смерш" (2007) — Все іде не так, як задумано...
+                  <br>Головні ролі: Андрій Єгоров, Андрій Душечкин, Антон Макарський, Борис Хімічев
+                  <br>Жанр: Військовий.
+                  <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+             </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://filmix.my/film/drama/70333-v-imperator-2012.html" target="_blank">
+                 <img src="Імператор.jpg" alt="Імператор" (2012) width="120">
+              </a>
+              <div class="film-description">
+              <p>"Імператор" (2012) — друга мирова війна, японія вже підписала пакт про капітуляцію....
+                 <br>Головні ролі: Мэттью Фокс, Томмі Ли Джонс, Каорі Момоі...
+                 <br>Жанр: Військовий.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+             </div>
+            
+        </section>
+    </div>
+
+
+    <footer>
+    <div class="footer-links">
+        <a href="#">Про сайт</a>
+        <a href="#">Контакти</a>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#"> Умови користування</a>
+        <a href="#">Часті запитання</a>
+        <a href="#">Підтримка</a>
+        <a href="#">Жанри</a>
+        <a href="#">Трейлери</a>
+        <a href="#">Новинки</a>
+    </div>
+    <div style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+        Створено з любов’ю &copy; 2025 — <span style="font-weight: bold;">MovieLink</span><br>
+        Дизайн та реалізація: <span style="color: #aaa;">Абросімов Тарас</span>
+    </div>
+</footer>
+<script>
+  function addToFavorites(button) 
+  {
+    if (button.textContent === '🤍') {
+      button.textContent = '❤️';
+      button.style.color = 'red';
+    } else {
+      button.textContent = '🤍';
+      button.style.color = 'white';
+    }
+  }
+</script>
+
+<script>
+  function rateFilm(button) 
+  {
+    button.style.transform = "scale(1.2)";
+    setTimeout(() => {
+      button.style.transform = "scale(1)";
+    }, 200);
+  }
+</script>
+</body>
+</html>
