@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieLink</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .logo-link {
+         position: absolute;
+         bottom: 5;
+         left: 0;
+         z-index: 1000;
+         margin: 0;
+         padding: 0;
+        }
+
+       .logo-img {
+           height: 150px;
+           width: auto;
+           cursor: pointer;
+           display: block;
+           margin: 0;
+        }
+        body {
+            background-image: url('fon.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            margin: 0;
+            height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0px; left: 0; right: 0; bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            filter: blur(1px);
+            z-index: -1;
+        }
+
+        header, footer {
+            background-color: #0a0000;
+            color: rgb(253, 250, 250);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header-buttons, .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .header-buttons button,
+        .footer-links a {
+            padding: 0.5rem 1rem;
+            background-color: #2f2d2d;
+            color: white;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .toolbar {
+            width: 200px;
+            background-color: #e6e2e287;
+            padding: 1rem;
+        }
+
+        .toolbar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toolbar li {
+            margin-bottom: 10px;
+            background-color: #e6e2e287 ;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .content {
+            flex: 1;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        .calendar-container {
+            margin: 1rem auto;
+            text-align: center;
+        }
+        .header {
+            position: relative;
+        }
+
+        .header-right-buttons {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .header-right-buttons button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .film-description {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+        }
+    
+    </style>
+</head>
+<body>
+    <header style="position: relative;">
+          <div class="logo-container">
+           <a href="../index.html" class="logo-link">
+              <img src="../logo.golovna.jpg" alt="MovieLink Logo" class="logo-img">
+          </a>
+     </div>
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem;">
+          <img src="logo.jpg" alt="MovieLink логотип" style="width: 100px; height: auto;">
+         <div style="display: flex; flex-direction: column; align-items: center;">
+           <h1 style="margin: 0; font-size: 2rem;">MovieLink</h1>
+         </div>
+      </div>
+
+        <div class="header-buttons">
+    <button onclick="location.href='../page1/Home.html'">Драми</button>
+    <button onclick="location.href='../page2/Home.html'">Фільми про Війну</button>
+    <button onclick="location.href='../page3/Dok.html'">Документальні</button>
+    <button onclick="location.href='../page4/Мультфільми.html'">Мультфільми</button>
+    <button onclick="location.href='../page5/Комедії.html'">Комедії</button>
+</div>
+            
+
+        <div class="header-right-buttons">
+        <a href="#login-form"><button>Авторизація</button></a>
+        <a href="../Registr.html"><button>Реєстрація</button></a>
+        </div>
+
+            
+     </div>
+    
+    </header>
+   
+
+    <div class="main">
+        <aside class="toolbar">
+    <ul>
+        <li>
+            <a href="https://uakino.me/" target="_blank">
+                <img src="uakino.png" width="200" alt="uakino">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="Youtube.png" width="200" alt="Youtube">
+            </a>
+        </li>
+        <li>
+            <a href="https://megogo.net/ua" target="_blank">
+                <img src="Megogo.png" width="200" alt="Megogo">
+            </a>
+        </li>
+        <li>
+            <a href="https://kinokrad.net/" target="_blank">
+                <img src="KinoKrad.png" width="200" alt="Kinokrad">
+            </a>
+        </li>
+        <li>
+            <a href="https://u.kinogo.online/" target="_blank">
+                <img src="kinogo.png" width="200" alt="Kinogo">
+            </a>
+        </li>
+    </ul>
+</aside>
+         <section class="content" style="flex-direction: column; align-items: flex-start;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                  <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+               <a href="https://uakino.me/filmy/genre_drama/633-gordist-ta-uperedzhennya.html" target="_blank">
+                 <img src="./film1.jpg" alt="Гордість і упередження (2005)" width="120">
+               </a>
+
+               <div class="film-description">
+              <p>"Гордість і упередження" (2005) — це витончена, емоційно насичена екранізація класичного роману Джейн Остін, яка вражає красою кадру, тонким гумором та глибоким психологізмом. Фільм захоплює з першої сцени, майстерно передаючи атмосферу англійської провінції та напругу між головними героями, що поступово переростає у справжнє кохання. Це історія про силу характеру, помилки сприйняття і другий шанс.
+                 <br>Головні ролі: Кіра Найтлі, Метью Макфейден, Дональд Сазерленд, Розамунд Пайк
+                 <br>Жанр: романтична драма, історичний фільм.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+              </p>
+              </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino.me/filmy/genre_drama/2602-dzheyn-eyr.html" target="_blank">
+                 <img src="film2.jpg" alt="Джейн Ейр (2011)   " width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Джейн Ейр" (2011) — це атмосферна, прониклива екранізація безсмертного роману Шарлотти Бронте, що майстерно поєднує готичну напругу, драму й стриману пристрасть. Фільм занурює в історію сильної й незалежної дівчини, яка, незважаючи на біль минулого, знаходить своє місце і справжнє кохання. Це витончена розповідь про гідність, таємниці і вірність собі.
+                 <br>Головні ролі: Міа Васіковська, Майкл Фассбендер, Джуді Денч, Джеймі Белл
+                 <br>Жанр: романтична драма, готичний фільм.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino.me/filmy/genre_drama/459-znedolen.html" target="_blank">
+                 <img src="film3.jpg" alt="Знедолені (2012)   " width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Знедолені" (2012) — це епічна, глибоко емоційна музична драма, що переносить глядача у вир пристрастей, страждань і надії на тлі буремної Франції XIX століття. Вражаючі музичні номери, сильні образи й потужна акторська гра роблять цю історію незабутньою. Це фільм про боротьбу за гідність, прощення і любов, яка долає навіть найтемніші обставини.
+                 <br>Головні ролі: Г'ю Джекман, Енн Гетевей, Рассел Кроу, Аманда Сейфрід
+                 <br>Жанр: історична музична драма.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino.me/filmy/genre_drama/2235-anna-karenna.html" target="_blank">
+                 <img src="film4.jpg" alt="Анна Кареніна  (2012)" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Анна Кареніна" (2012) — вишукана, стилізована екранізація класичного роману Льва Толстого, яка перетворює драму кохання на театральне дійство. Фільм заворожує візуальним стилем, глибокими емоціями та трагічною красою історії про пристрасть, вибір і суспільні рамки. Це емоційна подорож у світ блиску, болю і неминучих наслідків.
+                  <br>Головні ролі: Кіра Найтлі, Джуд Лоу, Аарон Тейлор-Джонсон, Алісія Вікандер
+                  <br>Жанр: історична романтична драма.
+                  <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+              </div>
+             </div>
+
+
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino.me/seriesss/love_story_series/24569-pivnich-i-pivden-1-sezon.html" target="_blank">
+                 <img src="film5.jpg" alt="Північ і Південь (2004)" width="120">
+              </a>
+              <div class="film-description">
+              <p>"Північ і Південь" (2004) — захоплива екранізація роману Елізабет Ґаскелл, що поєднує соціальну драму з ніжною, але напруженою історією кохання. На тлі промислової Англії розгортається історія двох сильних характерів, які долають упередження та власну гордість, щоб знайти одне одного. Це серіал, який вражає глибиною тем і щирістю почуттів.
+                 <br>Головні ролі: Даніела Денбі-Еш, Річард Армітедж, Тім Піґотт-Сміт, Сайнед К'юсак
+                 <br>Жанр: історична романтична драма, мінісеріал.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+             </div>
+            
+        </section>
+    </div>
+
+
+    <footer>
+    <div class="footer-links">
+        <a href="#">Про сайт</a>
+        <a href="#">Контакти</a>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#"> Умови користування</a>
+        <a href="#">Часті запитання</a>
+        <a href="#">Підтримка</a>
+        <a href="#">Жанри</a>
+        <a href="#">Трейлери</a>
+        <a href="#">Новинки</a>
+    </div>
+    <div style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+        Створено з любов’ю &copy; 2025 — <span style="font-weight: bold;">MovieLink</span><br>
+        Дизайн та реалізація: <span style="color: #aaa;">Скоряк Лілія</span>
+    </div>
+</footer>
+<script>
+  function addToFavorites(button) 
+  {
+    if (button.textContent === '🤍') {
+      button.textContent = '❤️';
+      button.style.color = 'red';
+    } else {
+      button.textContent = '🤍';
+      button.style.color = 'white';
+    }
+  }
+</script>
+
+<script>
+  function rateFilm(button) 
+  {
+    button.style.transform = "scale(1.2)";
+    setTimeout(() => {
+      button.style.transform = "scale(1)";
+    }, 200);
+  }
+</script>
+</body>
+</html>
