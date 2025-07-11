@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieLink</title>
+    <link rel="icon" type="image/x-icon" href="photo_2025-06-15_22-48-56.jpg">
+    <style>
+        .logo-link {
+         position: absolute;
+         bottom: 5;
+         left: 0;
+         z-index: 1000;
+         margin: 0;
+         padding: 0;
+        }
+
+       .logo-img {
+           height: 150px;
+           width: auto;
+           cursor: pointer;
+           display: block;
+           margin: 0;
+        }
+        body {
+            background-image: url('fon3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            margin: 0;
+            height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0px; left: 0; right: 0; bottom: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: inherit;
+            filter: blur(1px);
+            z-index: -1;
+        }
+
+        header, footer {
+            background-color: #0a0000;
+            color: rgb(253, 250, 250);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header-buttons, .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .header-buttons button,
+        .footer-links a {
+            padding: 0.5rem 1rem;
+            background-color: #2f2d2d;
+            color: white;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .toolbar {
+            width: 200px;
+            background-color: #e6e2e287;
+            padding: 1rem;
+        }
+
+        .toolbar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toolbar li {
+            margin-bottom: 10px;
+            background-color: #e6e2e287 ;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .content {
+            flex: 1;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            height: 120px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+        
+
+        .calendar-container {
+            margin: 1rem auto;
+            text-align: center;
+        }
+        .header {
+            position: relative;
+        }
+
+        .header-right-buttons {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .header-right-buttons button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .film-description {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4px);
+        }
+        
+    </style>
+</head>
+<body>
+    <header style="position: relative;">
+          <div class="logo-container">
+           <a href="../index.html" class="logo-link">
+              <img src="../logo.golovna.jpg" alt="MovieLink Logo" class="logo-img">
+          </a>
+     </div>
+    
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1rem;">
+          <img src="photo_2025-06-15_22-48-56.jpg" alt="MovieLink логотип" style="width: 100px; height: 112;">
+         <div style="display: flex; flex-direction: column; align-items: center;">
+           <h1 style="margin: 0; font-size: 2rem;">MovieLink</h1>
+         </div>
+      </div>
+
+        <div class="header-buttons">
+    <button onclick="location.href='../page1/Home.html'">Драми</button>
+    <button onclick="location.href='../page2/Home.html'">Фільми про Війну</button>
+    <button onclick="location.href='../page3/Dok.html'">Документальні</button>
+    <button onclick="location.href='../page4/Мультфільми.html'">Мультфільми</button>
+    <button onclick="location.href='../page5/Комедії.html'">Комедії</button>
+</div>
+            
+
+        <div class="header-right-buttons">
+        <a href="#login-form"><button>Авторизація</button></a>
+        <a href="../Registr.html"><button>Реєстрація</button></a>
+        </div>
+
+            
+     </div>
+    
+    
+       
+    </header>
+<body>
+    
+    
+    <div class="main">
+        <aside class="toolbar">
+              <ul>
+        <li>
+            <a href="https://uakino.me/" target="_blank">
+                <img src="uakino.png" width="200" alt="uakino">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="Youtube.png" width="200" alt="Youtube">
+            </a>
+        </li>
+        <li>
+            <a href="https://megogo.net/ua" target="_blank">
+                <img src="Megogo.png" width="200" alt="Megogo">
+            </a>
+        </li>
+        <li>
+            <a href="https://kinokrad.net/" target="_blank">
+                <img src="Kinokrad.png" width="200" alt="Kinokrad">
+            </a>
+        </li>
+        <li>
+            <a href="https://u.kinogo.online/" target="_blank">
+                <img src="kinogo.png" width="200" alt="Kinogo">
+            </a>
+        </li>
+    </ul>
+        </aside>
+        <section class="content">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino-bay.net/6928-gorod-prizrakov.html" target="_blank">
+                 <img src="1606763.jpg"alt="Місто привидів" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Місто привидів" (2017) — Трагічна історія про жителів сирійського селища Рака, колись спокійного та безпечного місця. Громадяни щодня працювали, а ввечері проводили час із сім'єю. І ніхто не міг передбачити, що терористичні сили захоплять мирні площі та зруйнують звичну повсякденність.
+                 <br>Головні ролі: Abdelaziz Alhamza, Mohamad Almusari, Hamoud Almousa, Naji Jerf, Hassan, Hussam.
+                 <br>Жанр: Документальний.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino-bay.net/49056-djuna-hodorovskogo.html" target="_blank">
+                 <img src="images (2).jfif"alt="Дюна Ходоровського" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Дюна Ходоровського" (2013) — Документальний фільм, що вийшов у 2013 році. Він розповідає про незавершений проект режисера та сценариста Алехандро Ходоровського з екранізації культового науково-фантастичного роману Френка Герберта «Дюна». 
+                 <br>Головні ролі: Алехандро Ходоровськи, Аманда Лір, Бронтіс Ходоровський, Крис Фосс, Christian Vander, Devin Faraci, Diane O'Bannon, Дрю МакУини, Гарі Кертц, Р. Р. Гігер, Jean-Paul Gibon, Jean-Pierre Vignau, Мішель Сейду, Ніколас Віндінґ Рефн, Річард Стенлі, Френк Ланджелла, Дольф Лундґрен, Dan O'Bannon, Флор.
+                 <br>Жанр: Документальний.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+             <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino-bay.net/12024-kuinsi.html" target="_blank">
+                 <img src="images (1).jfif"alt="Квінсі" width="120">
+              </a>
+
+               <div class="film-description">
+              <p>"Квінсі" (2018) — Життя відомого музиканта цікавить не лише його шанувальників. Герой документальної картини «Квінсі» став своєрідним феноменом, який досліджують далекі від музики люди.
+                 <br>Головні ролі: Куинси Джонс, Рашида Джонс, Карим Абдул-Джаббар, Кларенс Авант, Хлоя Бэйли, Холли Бэйли, Тони Беннетт, Бейонсе, Lina Bielsten, Мэри Джей Блайдж.
+                 <br>Жанр: Документальний.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+             <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino-bay.net/24583-divovizhna-blagodat.html" target="_blank">
+                 <img src="images.jfif"alt="Дивовижна благодать" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Дивовижна благодать" (2018) — Це документальний фільм, що вийшов у 2018 році в США. Фільм охоплює жанри музики та документального кіно. У фільмі розповідається про важливу історію Америки та її боротьбу з расизмом.
+                 <br>Головні ролі: Арета Франклін, Reverand James Cleveland, C.L. Franklin, Александер Гамілтон, Bernard Pretty Purdie, Chuck Rainey, Клара Ворд, Мік Джаггер, Сідні Полак, Чарлі Уоттс.
+                 <br>Жанр: Документальний.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+         <div style="display: flex; align-items: center; gap: 1rem;">
+                 <button onclick="addToFavorites(this)" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white;">🤍</button>
+              <a href="https://uakino-bay.net/79221-oppengejmer-2023.html" target="_blank">
+                 <img src="Оппенгеймер_(постер).png"alt="Оппенгеймер" width="120">
+              </a>
+
+              <div class="film-description">
+              <p>"Оппенгеймер" (2023) — Є захоплюючим історичним фільмом, створеним українським режисером Петром Івановим. Цей фільм відтворює неймовірну історію великого фізика і винахідника Роберта Оппенгеймера та його важливої ролі в розробці ядерної зброї.
+                 <br>Головні ролі: Киллиан Мерфи, Эмили Блант, Мэтт Дэймон, Роберт Дауни мл., Флоренс Пью.
+                 <br>Жанр: Документальний.
+                 <br><button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">❤️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🔥</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">☺️</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">😔</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤨</button>
+                     <button onclick="rateFilm(this)" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🤢</button>
+                </p>
+                </div>
+            </div>
+    </div>   
+
+
+     <footer>
+        
+        <div  class="footer-links">
+             <div class="footer-links">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">Про сайт</a>
+        <a href="#">Контакти </a>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови користування</a>
+        <a href="#">Часті запитання</a>
+        <a href="#">Підтримка</a>
+        <a href="#">Жанри</a>
+        <a href="#">Трейлери</a>
+        <a href="#">Новинки</a>
+        </div>
+        </div>
+        <div style="margin-top: 1rem; font-size: 0.9rem; color: #ccc;">
+        Створено з любов’ю &copy; 2025 — <span style="font-weight: bold;">MovieLink</span><br>
+        Дизайн та реалізація: <span style="color: #aaa;">Захарчук Олег</span>
+    </footer>
+    <script>
+  function addToFavorites(button) 
+  {
+    if (button.textContent === '🤍') {
+      button.textContent = '❤️';
+      button.style.color = 'red';
+    } else {
+      button.textContent = '🤍';
+      button.style.color = 'white';
+    }
+  }
+</script>
+
+<script>
+  function rateFilm(button) 
+  {
+    button.style.transform = "scale(1.2)";
+    setTimeout(() => {
+      button.style.transform = "scale(1)";
+    }, 200);
+  }
+</script>
+</body>
+</html>
